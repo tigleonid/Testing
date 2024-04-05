@@ -22,8 +22,8 @@ public class CotTest {
 
     @ParameterizedTest(name = "integerPiFactor")
     @ValueSource(doubles = {-2 * PI, -PI, 0, PI, 2 * PI})
-    public void cot_integerPiFactor(double x) {
-        assertThrows(MathException.class, () -> cot.calculate(x, eps));
+    public void cot_integerPiFactor(double x) throws MathException {
+        assertEquals(Double.NaN, cot.calculate(x, eps), accuracy);
     }
 
 
