@@ -11,6 +11,10 @@ public class Log extends AbstractFunction {
         this.ln = new Ln();
         this.base = base;
     }
+    public Log(int base, Ln ln) {
+        this.ln = ln;
+        this.base = base;
+    }
 
     public double calculate(double x, double eps) throws MathException {
         if (base <= 0 || base == 1) {

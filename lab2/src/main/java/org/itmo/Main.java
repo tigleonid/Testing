@@ -15,78 +15,91 @@ import java.io.IOException;
 public class Main
 {
     public static void main( String[] args ) throws IOException {
+        String ultimate_path =
+                "C:/Users/79777/IdeaProjects/SoftwareTesting/lab2/csv/";
+//                "csv/";
+
         Cos cos = new Cos();
         CsvWriter.write(
-                "csv/cos.csv",
+                ultimate_path+"cos.csv",
                 cos,
-                -1,
+                -2,
                 1,
                 0.1,
                 1E-12);
+
         Sin sin = new Sin();
         CsvWriter.write(
-                "csv/sin.csv",
+                ultimate_path+"sin.csv",
                 sin,
-                -1,
+                -2,
                 1,
                 0.1,
                 1E-12);
+
         Cot cot = new Cot();
         CsvWriter.write(
-                "csv/cot.csv",
+                ultimate_path+"cot.csv",
                 cot,
-                -1,
+                -2,
                 1,
                 0.1,
                 1E-12);
+
         Ln ln = new Ln();
         CsvWriter.write(
-                "csv/ln.csv",
+                ultimate_path+"ln.csv",
                 ln,
-                1,
+                0.1,
                 20,
                 0.1,
                 1E-12);
+
         Log log2 = new Log(2);
         CsvWriter.write(
-                "csv/log2.csv",
+                ultimate_path+"log2.csv",
                 log2,
-                1,
-                20,
+                0.1,
+                2.5,
                 0.1,
                 1E-12);
+
         Log log3 = new Log(3);
         CsvWriter.write(
-                "csv/log3.csv",
+                ultimate_path+"log3.csv",
                 log3,
-                1,
-                20,
+                0.1,
+                2.5,
                 0.1,
                 1E-12);
+
+
+
         FirstFunction firstFunction = new FirstFunction();
         CsvWriter.write(
-                "csv/function1.csv",
+                ultimate_path+"function1.csv",
                 firstFunction,
                 -2,
-                0,
+                0.5,
                 0.1,
                 1E-12);
+
         SecondFunction secondFunction = new SecondFunction();
         CsvWriter.write(
-                "csv/function2.csv",
+                ultimate_path+"function2.csv",
                 secondFunction,
-                0,
+                0.1,
                 2,
                 0.1,
                 1E-12);
         FunctionsSystem functionsSystem = new FunctionsSystem();
         CsvWriter.write(
-                "csv/system.csv",
+                ultimate_path+"system.csv",
                 functionsSystem,
                 -2,
                 2,
                 0.1,
-                1E-6);
+                1E-12);
 
     }
 }

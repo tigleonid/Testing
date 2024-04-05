@@ -27,10 +27,12 @@ public class CsvWriter {
         file.createNewFile();
         final PrintWriter printWriter = new PrintWriter(file);
         for (double x = from; x <= to; x+=step) {
+            x= Math.round(x * 100.0) / 100.0;
             try {
-                printWriter.println(Math.round(x * 100.0) / 100.0 + "," + function.calculate(x, eps));
+
+                printWriter.println(x + "," + function.calculate(x, eps));
             } catch (MathException e) {
-                printWriter.println(Math.round(x * 100.0) / 100.0 + "," + "undefined");
+                printWriter.println(x + "," + "NaN");
             }
         }
         printWriter.close();
